@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#projetos">Meus Projetos</a></li>
+                <li><a href="#editar-perfil">Editar Perfil</a></li>
+                <li><a href="logout.php">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de perfil -->
+    <section id="perfil">
+        <h1>Olá, [Nome do Usuário]</h1>
+        <p>Email: [Email do Usuário]</p>
+        <p>Data de Nascimento: [Data de Nascimento]</p>
+
+        <h2>Adicionar Novo Projeto</h2>
+        <form id="form-adicionar-projeto">
+            <input type="text" id="nome-projeto" placeholder="Nome do Projeto" required>
+            <textarea id="descricao-projeto" placeholder="Descrição do Projeto" required></textarea>
+            <input type="file" id="imagem-projeto" accept="image/*" required>
+            <button type="submit">Adicionar Projeto</button>
+        </form>
+
+        <h2>Meus Projetos</h2>
+        <div id="lista-projetos">
+            <!-- Os projetos adicionados aparecerão aqui -->
+        </div>
+
+        <h2 id="editar-perfil">Editar Perfil</h2>
+        <form id="form-editar-perfil">
+            <input type="text" id="novo-email" placeholder="Novo Email">
+            <input type="password" id="nova-senha" placeholder="Nova Senha">
+            <input type="date" id="data-nascimento" placeholder="Data de Nascimento">
+            <button type="submit">Salvar Alterações</button>
+        </form>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
